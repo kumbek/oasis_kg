@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#"><img src="data:image/png;base64,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" alt=""></a>
+        </div>
+        <nav class=navbar>
+            <a href="#">home</a>
+            <a href="#">page</a>
+            <a href="#">about</a>
+            <a href="#">dishes</a>
+            <a href="#">our menu</a>
+        </nav>
+
+        <div class="myicons">
+              
+            <div class="mycart" id="cart">
+                <i class="fas fa-cart-plus"></i>
+            </div>
+    
+            <div class="menu-bar fas fa-bars" id="menu-bar">
+                
+            </div>
+
+        </div>
+       <div class="add-to-cart">
+        <div class="main-cart">
+            <div class="inner-cart">
+
+             <div class="cart-content">
+                <div class="cross">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <img src="http://cdn.shopify.com/s/files/1/0502/7286/2366/products/bmc-burger-web.png?v=1603278945" alt="">
+                <p>Masala Chicken</p>
+                
+                </div>
+             </div>
+            <div class="inner-cart">
+                <div class="cross fas fa-times"></div>
+                <div class="cart-content">
+                    <img src="https://www.freepnglogos.com/uploads/burger-png/burger-png-png-images-yellow-images-12.png" width="100" height="100" alt="">
+                    <p>Donner</p>
+                  
+                </div>
+            </div>
+            <div class="inner-cart">
+                <div class="cross fas fa-times"></div>
+                <div class="cart-content">
+                    <img src="https://www.freepnglogos.com/uploads/burger-png/burger-png-png-images-yellow-images-12.png" width="100" height="100" alt="">
+                    <p>Donner malasa</p>
+                   
+                </div>
+            </div>
+        </div>
+       </div>
+       
+    </header>
+
+<div class="home">
+    <div class="main-home">
+        <div class="inner-home">
+            <div class="home-left-content">
+                <h2>OASIS DONNER</h2>
+                <H1>ARE YOU<br> HUNGRY?</H1>
+                <p>As well ada el cauete Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repellat?ipsum dolor sit amet.</p>
+                <a href="#"> Read More</a>
+            </div>
+        </div>
+
+        <div class="inner-home">
+           <div class="home-right-content">
+            <img src="https://i5.photo.2gis.com/images/branch/112/15762598733149291_ab37.jpg" alt="">
+           </div>
+        </div>
+    </div>
+</div>
+<!-- популярные блюда-->
+<div class="popular-dishes">
+    <div class="popular-headings">
+        <h3>popular dishes</h3>
+        <h1>popular dishes</h1>
+    </div>
+    <div class="main-popular">
+        <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="icons-popular">
+                leave it for now
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/149145.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div>
+        <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/149145.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/149145.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/149145.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/149145.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/149145.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/97121.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/97107.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div> <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/97112.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div>
+        <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/97116.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div>
+        <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/97235.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div>
+        <div class="inner-popular">
+            <div class="icons-popular">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="popular-content">
+                <img src="https://nambafood.kg/dish_image/97234.png" alt="">
+                <div class="popular-content-inner">
+                    <h2>Доннер запеченый с говядиной</h2>
+                    <h3>Цена = 180 сом/- </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="special-offer">
+    
+    <div class="main-special">
+        <div class="inner-special">
+            <div class="left-special">
+                <h3>Special offer</h3>
+                <h2>Good food drinks & 
+                    Great Company </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis nobis modi iste, maiores harum eligendi architecto earum numquam? Eius iste odit dicta voluptatem laborum deserunt quidem eum accusantium velit.
+                    </p>
+                    <a href="#">Learn More</a>
+
+            </div>
+        </div>
+        <div class="inne-special">
+            <div class="right-special">
+                <img src="https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/rdzurpxuzqgtcztb6ozx" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="our-menu">
+    <div class="our-menu-headings">
+        <h3>our special menu</h3>
+        <h1>want to eat</h1>
+    </div>
+
+    <div class="main-ourmenu">
+        <div class="inner-ourmenu">
+            <div class="menu-content">
+                <i class="fas fa-hamburger"></i>
+                <h2>Combo Pack</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio doloribus rem cupiditate architecto tempora laboriosam quasi mollitia, minima deserunt?
+                </p>
+                <div class="menu-images">
+                    <img src="  https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/rdzurpxuzqgtcztb6ozx" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="inner-ourmenu">
+            <div class="menu-content">
+                <i class="fas fa-hamburger"></i>
+                <h2>Combo Pack</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio doloribus rem cupiditate architecto tempora laboriosam quasi mollitia, minima deserunt?
+                </p>
+                <div class="menu-images">
+                    <img src="https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/rdzurpxuzqgtcztb6ozx" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="inner-ourmenu">
+            <div class="menu-content">
+                <i class="fas fa-hamburger"></i>
+                <h2>Combo Pack</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio doloribus rem cupiditate architecto tempora laboriosam quasi mollitia, minima deserunt?
+                </p>
+                <div class="menu-images">
+                    <img src="https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/rdzurpxuzqgtcztb6ozx" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="inner-ourmenu">
+            <div class="menu-content">
+                <i class="fas fa-hamburger"></i>
+                <h2>Combo Pack</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio doloribus rem cupiditate architecto tempora laboriosam quasi mollitia, minima deserunt?
+                </p>
+                <div class="menu-images">
+                    <img src="https://res.cloudinary.com/glovoapp/h_225,f_auto,q_auto/Stores/rdzurpxuzqgtcztb6ozx" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="lates-new">
+    <div class="lates-new-headings">
+        <h3>Lates Blogs</h3>
+        <h1>Lates News and Blogs</h1>
+    </div>
+    <div class="main-lates-new">
+        <div class="inner-lates-news">
+            <h2>01 January best sale</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="lates-inner-image">
+                <img src="http://st-1.akipress.org/127/.storage/limon2/images/november2014/4ade8822c549314f7afe2a569e66d1c6.JPG" alt="">
+            </div>
+        </div>
+
+        <div class="inner-lates-news">
+            <h2>01 January best sale</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="lates-inner-image">
+                <img src="http://st-1.akipress.org/127/.storage/limon2/images/november2014/4ade8822c549314f7afe2a569e66d1c6.JPG" alt="">
+            </div>
+        </div>
+        <div class="inner-lates-news">
+            <h2>01 January best sale</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="lates-inner-image">
+                <img src="http://st-1.akipress.org/127/.storage/limon2/images/november2014/4ade8822c549314f7afe2a569e66d1c6.JPG" alt="">
+            </div>
+        </div>
+        <div class="inner-lates-news">
+            <h2>01 January best sale</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="lates-inner-image">
+                <img src="http://st-1.akipress.org/127/.storage/limon2/images/november2014/4ade8822c549314f7afe2a569e66d1c6.JPG" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+<div class="container">
+    <div class="row">
+        <div class="footer-col">
+        <h4>company</h4>
+        <ul><li><a href="#">namba</a></li>
+            <li><a href="#">kenguru</a></li>
+            <li><a href="#">namba food</a></li>
+            <li><a href="#">food dream</a></li>
+        </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul><li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment option</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Online shop</h4>
+            <ul>
+                <li><a href="#">watch</a></li>
+                <li><a href="#">bag</a></li>
+                <li><a href="#">shoes</a></li>
+                <li><a href="#">dress</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i>
+                    <a href="#"><i class="fab fa-twitter"></i>
+                        <a href="#"><i class="fab fa-instagram"></i>
+                            <a href="#"><i class="fab fa-linkedin-in"></i>
+            </div> 
+        </div>
+    </div>
+</div>
+</footer>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
